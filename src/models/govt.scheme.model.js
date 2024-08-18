@@ -35,5 +35,5 @@ const govtSchemeSchema = new mongoose.Schema({
   },
 }, { timestamps: true });
 
-// Create the GovtScheme model using the schema
+
 export const GovtScheme = mongoose.model("GovtScheme", govtSchemeSchema);
