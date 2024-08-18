@@ -18,16 +18,13 @@ const govtSchemeSchema = new mongoose.Schema({
   }],
   noOfApplicantsRequired: {
     type: Number,
-    required: true,
   },
   eligibilityCriteria: {
     age: {
       type: Number,
-      required: true,
     },
     income: {
       type: Number,
-      required: true,
     },
     gender: {
       type: String,
