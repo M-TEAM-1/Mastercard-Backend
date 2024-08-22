@@ -1,8 +1,8 @@
-import express from 'express';
-import adminController from '../controllers/admin.controller.js';
+// import express from 'express';
+// // import adminController from '../controllers/admin.controller.js';
 
-const router = express.Router();
+// const router = express.Router();
 
-router.post('/newScheme', adminController.post_newScheme);
+// router.post('/newScheme', adminController.post_newScheme);
 
-export default router;
+// export default router;

@@ -15,22 +15,20 @@ const studentSchema = new Schema({
     },
     instituteRollNo:{
         type:Number,
-        required:true,
+        // required:true,
         unique:true,
         index:true
     },
     phoneNumber:{
         type:Number,
-        required:true,
         unique:true
     },
     class:{
         type:String,
-        required:true,
 
     },avatar:{
         type:String, // Cloudinary URL
-        required:true
+        
     },
     password:{
         type:String,
@@ -38,15 +36,15 @@ const studentSchema = new Schema({
     },
     dob:{
         type:Date,
-        required: true
+       
     },
     Marks:{
         type:Number,
-        required:true
+        
     },
     incomeLevel:{
         type: Number,
-        required: true
+       
     },
     instituteId:{
         type: Schema.Types.ObjectId,
@@ -55,14 +53,14 @@ const studentSchema = new Schema({
 },{timestamps: true})
 
 
-userSchema.pre("save", async function(next){
-    if(!this.isModified("password")) next() 
-    this.password= await bcrypt.hash(this.password,10) 
-    next()
-})
+// userSchema.pre("save", async function(next){
+//     if(!this.isModified("password")) next() 
+//     this.password= await bcrypt.hash(this.password,10) 
+//     next()
+// })
 
-userSchema.methods.isPasswordCorrect = async function(password){
-    return await bcrypt.compare(password, this.password)
-}
+// userSchema.methods.isPasswordCorrect = async function(password){
+//     return await bcrypt.compare(password, this.password)
+// }
 
 export const Student = mongoose.model("Student",studentSchema)
